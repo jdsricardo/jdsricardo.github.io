@@ -1,9 +1,24 @@
 // Script para o calendário
 
 const messages = {
-    '2023-12-17': 'Início da nossa jornada juntos!',
-    '2024-12-17': 'Completamos um ano de namoro!',
-    // Adicione mais mensagens no formato 'YYYY-MM-DD'
+    '2023-12-17': 'O início da nossa jornada juntos. A melhor decisão que ja tomei!',
+    '2023-12-17': 'O início da nossa jornada juntos. A melhor decisão que já tomei!',
+    '2023-12-18': 'Cada dia ao seu lado é uma nova razão para sorrir. Te amo!',
+    '2023-12-19': 'Em cada gesto seu, vejo o quanto o nosso amor é forte e bonito.',
+    '2023-12-20': 'Amar você é um privilégio que agradeço todos os dias.',
+    '2023-12-21': 'Contigo, cada momento é inesquecível e repleto de felicidade.',
+    '2023-12-22': 'Te ter ao meu lado é o maior presente da minha vida.',
+    '2023-12-23': 'Cada dia ao seu lado me faz querer ser uma pessoa melhor.',
+    '2023-12-24': 'Neste Natal, fui grato por ter você ao meu lado, compartilhando momentos especiais.',
+    '2023-12-25': 'Nosso primeiro Natal! Com você, cada dia é uma celebração do nosso amor.',
+    '2023-12-26': 'Juntos, fazemos até os dias mais comuns se tornarem extraordinários.',
+    '2023-12-27': 'Seu sorriso ilumina minha vida e me faz sentir amado todos os dias.',
+    '2023-12-28': 'Você é o motivo de eu acreditar no amor verdadeiro.',
+    '2023-12-29': 'Nossa história é escrita a cada novo capítulo que vivemos juntos.',
+    '2023-12-30': 'Agradeço por fazer de cada dia ao seu lado uma lembrança inesquecível.',
+    '2023-12-31': 'O nosso primeiro ano novo juntos. Te amo para sempre!',
+    '2024-12-17': 'Um ano ano ao lado do amor da minha vida!',
+    
 };
 
 const startDate = new Date('2023-12-17');
