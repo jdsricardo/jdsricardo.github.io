@@ -1,7 +1,7 @@
 /* Estilos Globais */
 body {
     background-color: #f4e1c1; /* Tom base de papel antigo */
-    /* background: url('assets/coracao.png') repeat; */
+    background: url('assets/coracao.png') repeat;
     background-size: 50px 50px;
     padding: 20px;
     font-family: 'Georgia', serif; /* Fonte que combina com o tema */
