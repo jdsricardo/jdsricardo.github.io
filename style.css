@@ -35,24 +35,26 @@ body {
     margin: 20px;
 }
 
-.coracao-lado {
+/* .coracao-lado {
     width: 100px;
     height: 100px;
     background: url('assets/coracao.png') no-repeat center;
     background-size: contain;
     position: relative;
     margin: 10px;
-}
+} */
 
 .coracao-lado img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
+    position: relative;
+    margin: 10px;
+    background-size: contain;
+    width: 100px;   /* Tamanho aumentado */
+    height: 100px;  /* Tamanho aumentado */
     object-fit: cover;
-    border-radius: 50%;
+    --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+    -webkit-mask-box-image: var(--_m);
+    mask-border: var(--_m);
+    clip-path: polygon(-42% 0, 50% 91%, 142% 0); /* Coração */
 }
 
 /* Container do Calendário */
@@ -113,11 +115,16 @@ body {
 
 /* Estilos para o dia selecionado */
 .calendario .dia.active {
-    background-color: #f1f1f1;      /* Cor cinza para o fundo */
-    border-radius: 50%;             /* Torna o fundo circular */
-    position: relative;             /* Necessário para posicionamento */
-    z-index: 1;                     /* Garante que o fundo fique atrás do número */
-    border: 2px solid #ccc;         /* Opcional: adicionar borda */
+    background-color: #f1f1f1;
+    /* Cor cinza para o fundo */
+    border-radius: 50%;
+    /* Torna o fundo circular */
+    position: relative;
+    /* Necessário para posicionamento */
+    z-index: 1;
+    /* Garante que o fundo fique atrás do número */
+    border: 2px solid #ccc;
+    /* Opcional: adicionar borda */
 }
 
 
@@ -291,4 +298,3 @@ body {
         font-size: 1rem;
     }
 }
-
