@@ -1,7 +1,7 @@
 /* Estilos Globais */
 body {
     
-    background-color: #f1e0c6; /* Cor suave de fundo que lembra uma folha antiga ou papel envelhecido */
+    background-color: #f2e6d3; /* Cor suave de fundo que lembra uma folha antiga ou papel envelhecido */
     background-image: url("https://www.transparenttextures.com/patterns/paper.png");
     background-position: center center; /* Centraliza a textura */
     padding: 20px;
@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-    background-color: #f9f9f9;
+    background-color: #f2e6d3;
     /* Tom claro para destacar do fundo */
     border: 1px solid #d1b994;
     /* Borda sutil */
