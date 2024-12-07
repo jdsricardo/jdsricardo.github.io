@@ -38,8 +38,20 @@
             <div id="calendario" class="calendario"></div>
         </div>
 
-        <!-- Mensagem exibida ao selecionar um dia -->
-        <div id="mensagem" class="mensagem">Selecione um dia para ver a mensagem!</div>
+<!-- Mensagem exibida ao selecionar um dia -->
+<div class="mensagem">
+    <button id="prev-day">
+        &lt;
+    </button>
+    <div id="mensagem" class="text-center flex-grow-1 mx-3">
+        <span id="mensagem-text">Selecione um dia para ver a mensagem!</span>
+    </div>
+    <button id="next-day">
+        &gt;
+    </button>
+</div>
+
+
     </div>
 
     <!-- Poema em itálico e responsivo -->
@@ -53,7 +65,8 @@
     </div>
 
     <!-- Álbum de fotos -->
-    <div class="album-container container" style="background: url('assets/coracao.png') repeat; background-size: 19.7px 19.7px; padding: 20px;">
+    <div class="album-container container"
+        style="background: url('assets/coracao.png') repeat; background-size: 19.7px 19.7px; padding: 20px;">
         <h2 class="text-center mb-4" style="background-color: #f2e6d3;">Álbum de Fotos</h2>
         <div class="row g-3" style="background-color: #f2e6d3;">
             <!-- Geração automática das fotos -->

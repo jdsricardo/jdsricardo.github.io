@@ -139,26 +139,41 @@ body {
 
 
 .mensagem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Coloca as flechas nas extremidades */
     text-align: center;
     margin-top: 20px;
     font-size: 1.2rem;
     background-color: #f9f9f9;
-    /* Tom claro para destacar do fundo */
     border: 1px solid #d1b994;
-    /* Borda sutil */
     border-radius: 10px;
-    /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Sombra elegante */
     padding: 15px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    /* Centraliza no meio */
     font-style: italic;
-    /* Toque clássico */
     color: #5b4636;
 }
+
+.mensagem > div {
+    flex-grow: 1; /* Faz o conteúdo da mensagem ocupar o espaço restante */
+}
+
+.mensagem button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #5b4636;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.mensagem button:hover {
+    background-color: #5b463618; /* Cor de hover para os botões */
+}
+
 
 
 /* Botões de Navegação */
