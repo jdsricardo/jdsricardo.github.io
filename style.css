@@ -1,0 +1,235 @@
+/* Estilos Globais */
+body {
+    background-color: #f4e1c1; /* Tom base de papel antigo */
+    background: url('assets/coracao.png') repeat;
+    background-size: 50px 50px;
+    padding: 20px;
+    font-family: 'Georgia', serif; /* Fonte que combina com o tema */
+    color: #5b4636; /* Tom de texto antigo */
+    padding: 20px;
+}
+
+/* Título e Corações */
+.titulo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #f9f9f9; /* Tom claro para destacar do fundo */
+    border: 1px solid #d1b994; /* Borda sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+
+.titulo-vermelho {
+    color: red;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px;
+}
+
+.coracao-lado {
+    width: 100px;
+    height: 100px;
+    background: url('assets/coracao.png') no-repeat center;
+    background-size: contain;
+    position: relative;
+    margin: 10px;
+}
+
+.coracao-lado img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Container do Calendário */
+.calendario-wrapper {
+
+    margin: 50px auto; /* Centraliza horizontalmente */
+    max-width: 800px;   /* Limita a largura máxima em PCs */
+    width: 100%;        /* Garante responsividade */
+}
+
+.calendario-container {
+    max-width: 500px; /* Alterado de 100% para 500px */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendario-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendario div {
+    padding: 10px;
+    border-radius: 5px;
+    user-select: none;
+    font-size: 1rem;
+}
+
+.dia-semana {
+    font-weight: bold;
+    background-color: #f1f1f1;
+}
+
+.dia {
+    cursor: pointer;
+}
+
+.dia.disabled {
+    background-color: #f8f9fa;
+    color: #ddd;
+    cursor: not-allowed;
+}
+
+.dia.active {
+    background-color: #ffe4e1;
+    font-weight: bold;
+}
+
+.mensagem {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    background-color: #f9f9f9; /* Tom claro para destacar do fundo */
+    border: 1px solid #d1b994; /* Borda sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    padding: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; /* Centraliza no meio */
+    font-style: italic; /* Toque clássico */
+    color: #5b4636;
+}
+
+
+/* Botões de Navegação */
+.btn-navegar {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-navegar:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-navegar:hover:not(:disabled) {
+    color: red;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 576px) {
+    /* Título e Corações */
+    .titulo-container {
+        flex-direction: row;    /* Mantém os elementos lado a lado */
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: nowrap;      /* Evita quebra de linha */
+    }
+
+    .titulo-vermelho {
+        font-size: 1.8rem;      /* Reduzido para caber melhor */
+        margin: 10px;
+    }
+
+    .coracao-lado {
+        width: 80px;             /* Ajustado para PC */
+        height: 80px;
+        margin: 5px;
+    }
+
+    .coracao-lado img {
+        width: 60px;            /* Reduzido proporcionalmente */
+        height: 60px;
+    }
+
+    /* Container do Calendário */
+    .calendario-wrapper {
+        padding: 10px;
+        margin-top: 30px;
+        max-width: 100%;        /* Garante que ocupe toda a largura do container */
+    }
+
+    .calendario-container {
+        max-width: 100%;        /* Ajusta para telas menores */
+        padding: 15px;
+    }
+
+    .calendario-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .calendario div {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .dia-semana {
+        font-size: 0.8rem;
+    }
+
+    .dia {
+        font-size: 0.8rem;
+    }
+
+    .mensagem {
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+
+    .btn-navegar {
+        font-size: 1rem;
+    }
+}
+
+/* Álbum de fotos */
+
+.card {
+    border: 3px solid #ddd; /* Moldura ao redor da imagem */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem fique dentro da moldura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%; /* Faz a imagem ocupar toda a largura da card */
+    height: 200px; /* Tamanho fixo da imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorcer, cortando se necessário */
+    object-position: center; /* Centraliza a imagem */
+}
+
+
