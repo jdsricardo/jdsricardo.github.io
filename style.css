@@ -1,15 +1,12 @@
 /* Estilos Globais */
 body {
-    background-color: #f4e1c1;
-    /* Tom base de papel antigo */
-    background: url('assets/coracao.png') repeat;
-    background-size: 50px 50px;
+    
+    background-color: #f1e0c6; /* Cor suave de fundo que lembra uma folha antiga ou papel envelhecido */
+    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+    background-position: center center; /* Centraliza a textura */
     padding: 20px;
-    font-family: 'Georgia', serif;
-    /* Fonte que combina com o tema */
-    color: #5b4636;
-    /* Tom de texto antigo */
-    padding: 20px;
+    font-family: 'Georgia', serif; /* Fonte sofisticada e romântica */
+    color: #5b4636; /* Cor de texto suave */
 }
 
 /* Título e Corações */
@@ -29,7 +26,8 @@ body {
 }
 
 .titulo-vermelho {
-    color: red;
+    color: #d04f4f;
+    font-family: 'Georgia', serif;
     font-size: 2.5rem;
     text-align: center;
     margin: 20px;
@@ -48,18 +46,23 @@ body {
     position: relative;
     margin: 10px;
     background-size: contain;
-    width: 100px;   /* Tamanho aumentado */
-    height: 100px;  /* Tamanho aumentado */
+    width: 100px;
+    /* Tamanho aumentado */
+    height: 100px;
+    /* Tamanho aumentado */
     object-fit: cover;
-    --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+    --_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
     -webkit-mask-box-image: var(--_m);
     mask-border: var(--_m);
-    clip-path: polygon(-42% 0, 50% 91%, 142% 0); /* Coração */
+    clip-path: polygon(-42% 0, 50% 91%, 142% 0);
+    /* Coração */
 }
 
 /* Container do Calendário */
 .calendario-wrapper {
-
+    background: url('assets/coracao.png') repeat;
+    background-size: 19.7px 19.7px;
+    padding: 20px;
     margin: 50px auto;
     /* Centraliza horizontalmente */
     max-width: 800px;
@@ -222,17 +225,11 @@ body {
         margin: 10px;
     }
 
-    .coracao-lado {
-        width: 100px;
-        /* Ajustado para PC */
-        height: 100px;
-        margin: 5px;
-    }
 
     .coracao-lado img {
-        width: 50px;
+        width: 70px;
         /* Reduzido proporcionalmente */
-        height: 50px;
+        height: 70px;
     }
 
     /* Container do Calendário */
