@@ -1,7 +1,7 @@
 /* Estilos Globais */
 body {
     background-color: #f4e1c1; /* Tom base de papel antigo */
-    background: url('assets/coracao.png') repeat;
+    /* background: url('assets/coracao.png') repeat; */
     background-size: 50px 50px;
     padding: 20px;
     font-family: 'Georgia', serif; /* Fonte que combina com o tema */
@@ -186,6 +186,12 @@ body {
 
     .calendario-header h3 {
         font-size: 1.2rem;
+    }
+
+    .calendario {
+        grid-template-columns: repeat(7, minmax(0, 1fr)); /* Ajusta as colunas */
+        width: 100%; /* Garante que o grid ocupe toda a largura disponível */
+        gap: 5px; /* Mantém o espaçamento entre as células */
     }
 
     .calendario div {
