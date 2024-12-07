@@ -74,20 +74,30 @@ function renderizarCalendario() {
         const div = document.createElement('div');
         div.textContent = dia;
         div.className = 'dia';
+        div.setAttribute('data-date', dataString); // Adiciona o atributo data-date
 
         if (dataAtual < startDate || dataAtual > endDate) {
             div.classList.add('disabled');
         } else {
-            div.addEventListener('click', () => exibirMensagem(dataString));
+            div.addEventListener('click', () => exibirMensagem(div, dataString)); // Passa o elemento div
         }
 
         calendario.appendChild(div);
     }
 }
 
-// Função para exibir mensagens
-function exibirMensagem(data) {
+// Função para exibir mensagens e gerenciar a classe 'active'
+function exibirMensagem(diaClicado, data) {
     mensagemDiv.textContent = messages[data] || 'Ainda não há mensagem para este dia.';
+
+    // Remover a classe 'active' de todos os dias
+    const diasAtivos = document.querySelectorAll('.calendario .dia.active');
+    diasAtivos.forEach(d => d.classList.remove('active'));
+
+    // Adicionar a classe 'active' ao dia clicado, se não for desabilitado
+    if (!diaClicado.classList.contains('disabled')) {
+        diaClicado.classList.add('active');
+    }
 }
 
 // Navegação entre os meses

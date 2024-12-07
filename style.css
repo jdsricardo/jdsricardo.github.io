@@ -1,11 +1,14 @@
 /* Estilos Globais */
 body {
-    background-color: #f4e1c1; /* Tom base de papel antigo */
+    background-color: #f4e1c1;
+    /* Tom base de papel antigo */
     background: url('assets/coracao.png') repeat;
     background-size: 50px 50px;
     padding: 20px;
-    font-family: 'Georgia', serif; /* Fonte que combina com o tema */
-    color: #5b4636; /* Tom de texto antigo */
+    font-family: 'Georgia', serif;
+    /* Fonte que combina com o tema */
+    color: #5b4636;
+    /* Tom de texto antigo */
     padding: 20px;
 }
 
@@ -15,10 +18,14 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-    background-color: #f9f9f9; /* Tom claro para destacar do fundo */
-    border: 1px solid #d1b994; /* Borda sutil */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    background-color: #f9f9f9;
+    /* Tom claro para destacar do fundo */
+    border: 1px solid #d1b994;
+    /* Borda sutil */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra elegante */
 }
 
 .titulo-vermelho {
@@ -51,13 +58,17 @@ body {
 /* Container do Calendário */
 .calendario-wrapper {
 
-    margin: 50px auto; /* Centraliza horizontalmente */
-    max-width: 800px;   /* Limita a largura máxima em PCs */
-    width: 100%;        /* Garante responsividade */
+    margin: 50px auto;
+    /* Centraliza horizontalmente */
+    max-width: 800px;
+    /* Limita a largura máxima em PCs */
+    width: 100%;
+    /* Garante responsividade */
 }
 
 .calendario-container {
-    max-width: 500px; /* Alterado de 100% para 500px */
+    max-width: 500px;
+    /* Alterado de 100% para 500px */
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -100,30 +111,43 @@ body {
     cursor: pointer;
 }
 
+/* Estilos para o dia selecionado */
+.calendario .dia.active {
+    background-color: #f1f1f1;  /* Cor cinza para o fundo */
+    border-radius: 50%;         /* Torna o fundo circular */
+    color: #000000;             /* Cor do texto para contraste */
+    position: relative;         /* Necessário para posicionamento */
+    z-index: 1;                 /* Garante que o fundo fique atrás do número */
+    
+}
+
+
 .dia.disabled {
     background-color: #f8f9fa;
     color: #ddd;
     cursor: not-allowed;
 }
 
-.dia.active {
-    background-color: #ffe4e1;
-    font-weight: bold;
-}
 
 .mensagem {
     text-align: center;
     margin-top: 20px;
     font-size: 1.2rem;
-    background-color: #f9f9f9; /* Tom claro para destacar do fundo */
-    border: 1px solid #d1b994; /* Borda sutil */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    background-color: #f9f9f9;
+    /* Tom claro para destacar do fundo */
+    border: 1px solid #d1b994;
+    /* Borda sutil */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra elegante */
     padding: 15px;
     max-width: 600px;
     margin-left: auto;
-    margin-right: auto; /* Centraliza no meio */
-    font-style: italic; /* Toque clássico */
+    margin-right: auto;
+    /* Centraliza no meio */
+    font-style: italic;
+    /* Toque clássico */
     color: #5b4636;
 }
 
@@ -147,28 +171,34 @@ body {
 
 /* Ajustes para telas menores */
 @media (max-width: 576px) {
+
     /* Título e Corações */
     .titulo-container {
-        flex-direction: row;    /* Mantém os elementos lado a lado */
+        flex-direction: row;
+        /* Mantém os elementos lado a lado */
         align-items: center;
         justify-content: center;
         margin-top: 20px;
-        flex-wrap: nowrap;      /* Evita quebra de linha */
+        flex-wrap: nowrap;
+        /* Evita quebra de linha */
     }
 
     .titulo-vermelho {
-        font-size: 1.8rem;      /* Reduzido para caber melhor */
+        font-size: 1.8rem;
+        /* Reduzido para caber melhor */
         margin: 10px;
     }
 
     .coracao-lado {
-        width: 80px;             /* Ajustado para PC */
+        width: 80px;
+        /* Ajustado para PC */
         height: 80px;
         margin: 5px;
     }
 
     .coracao-lado img {
-        width: 60px;            /* Reduzido proporcionalmente */
+        width: 60px;
+        /* Reduzido proporcionalmente */
         height: 60px;
     }
 
@@ -176,22 +206,27 @@ body {
     .calendario-wrapper {
         padding: 10px;
         margin-top: 30px;
-        max-width: 100%;        /* Garante que ocupe toda a largura do container */
+        max-width: 100%;
+        /* Garante que ocupe toda a largura do container */
     }
 
     .calendario-container {
-        max-width: 100%;        /* Ajusta para telas menores */
+        max-width: 100%;
+        /* Ajusta para telas menores */
         padding: 15px;
     }
 
     .calendario-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.0rem;
     }
 
     .calendario {
-        grid-template-columns: repeat(7, minmax(0, 1fr)); /* Ajusta as colunas */
-        width: 100%; /* Garante que o grid ocupe toda a largura disponível */
-        gap: 5px; /* Mantém o espaçamento entre as células */
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        /* Ajusta as colunas */
+        width: 100%;
+        /* Garante que o grid ocupe toda a largura disponível */
+        gap: 5px;
+        /* Mantém o espaçamento entre as células */
     }
 
     .calendario div {
@@ -199,11 +234,25 @@ body {
         font-size: 0.8rem;
     }
 
-    .dia-semana {
-        font-size: 0.8rem;
+    /* Aumentar a especificidade para sobrescrever .calendario div */
+    .calendario .dia-semana {
+        font-size: 0.8rem !important;
+        /* Ajuste do tamanho da fonte */
+        white-space: nowrap !important;
+        /* Impede quebra de linha */
+        overflow: visible !important;
+        /* Garante que o texto seja exibido completamente */
+        text-overflow: clip !important;
+        /* Remove a elipse "..." */
+        text-align: center !important;
+        /* Centraliza o texto dentro do quadrado */
+        padding: 5px 0 !important;
+        /* Adiciona padding para melhor espaçamento */
+        box-sizing: border-box;
+        /* Garante que padding seja incluído na largura total */
     }
 
-    .dia {
+    .calendario .dia {
         font-size: 0.8rem;
     }
 
@@ -220,9 +269,11 @@ body {
 /* Álbum de fotos */
 
 .card {
-    border: 3px solid #ddd; /* Moldura ao redor da imagem */
+    border: 3px solid #ddd;
+    /* Moldura ao redor da imagem */
     border-radius: 8px;
-    overflow: hidden; /* Garante que a imagem fique dentro da moldura */
+    overflow: hidden;
+    /* Garante que a imagem fique dentro da moldura */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
@@ -232,10 +283,12 @@ body {
 }
 
 .card-img-top {
-    width: 100%; /* Faz a imagem ocupar toda a largura da card */
-    height: 200px; /* Tamanho fixo da imagem */
-    object-fit: cover; /* Ajusta a imagem sem distorcer, cortando se necessário */
-    object-position: center; /* Centraliza a imagem */
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura da card */
+    height: 200px;
+    /* Tamanho fixo da imagem */
+    object-fit: cover;
+    /* Ajusta a imagem sem distorcer, cortando se necessário */
+    object-position: center;
+    /* Centraliza a imagem */
 }
-
-
